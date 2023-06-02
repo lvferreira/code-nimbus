@@ -18,8 +18,8 @@ public class Index {
 		// Invoking Browser
 		// 
 		// Chrome - ChromeDriver (chromedriver.exe) -> Chrome Browser (methods)
-		// Firefox - FirefoxDriver (geckodriver.exe) -> Methods
-		// Edge - EdgeDriver (edgedriver.exe) -> Methods
+		// Firefox - FirefoxDriver (geckodriver.exe) -> Firefox Browser (methods)
+		// Edge - EdgeDriver (edgedriver.exe) -> Edge Browser (methods)
 		
 		// WebDriver Interface + Browser Driver Class Methods
 		String webdriver = "webdriver.edge.driver";
