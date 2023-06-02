@@ -30,13 +30,7 @@ public class Index {
 		WebDriver driver = new EdgeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
-		// Page Elements
-		String url = "https://rahulshettyacademy.com/";
-		driver.get(url);
-		driver.get(url+"locatorspractice/");
-		System.out.println(driver.getTitle());
-		System.out.println(driver.getCurrentUrl());
-		
+		pageElements(driver);
 		validPassword(driver);
 		//		invalidPassword(driver);
 		//		forgotPassword(driver);
@@ -44,6 +38,16 @@ public class Index {
 		driver.close();
 		
 	}
+	
+	// Page Elements
+		public static void pageElements(WebDriver driver) {
+			String url = "https://rahulshettyacademy.com/";
+			driver.get(url);
+			driver.get(url+"locatorspractice/");
+			System.out.println(driver.getTitle());
+			System.out.println(driver.getCurrentUrl());
+		}
+			
 	
 	// Valid password
 		public static void validPassword(WebDriver driver) {
