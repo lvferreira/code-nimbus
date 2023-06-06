@@ -52,6 +52,7 @@ public class Index {
 		public static void validPassword(WebDriver driver) throws InterruptedException {
 			// Declare an explicit wait with a timeout of 10 seconds
 		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    
 			String username = "lahunakbal";
 			String password = forgotPassword(driver);
 			
