@@ -27,6 +27,14 @@ public class Index {
 			String alertMessage = driver.switchTo().alert().getText();
 			System.out.println(alertMessage);
 		driver.switchTo().alert().accept();
+		
+		driver.findElement(By.cssSelector("[placeholder='Enter Your Name']")).sendKeys("Lahun Akbal");
+		driver.findElement(By.cssSelector("[onclick='displayConfirm()']")).click();
+		
+			String confirmMessage = driver.switchTo().alert().getText();
+			System.out.println(confirmMessage);
+		driver.switchTo().alert().dismiss();
+		
 		driver.close();
 	}
 
