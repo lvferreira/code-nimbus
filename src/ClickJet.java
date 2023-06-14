@@ -18,7 +18,7 @@ public class ClickJet {
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 
-		// Launch Browser (
+		// Launch Browser
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -104,11 +104,16 @@ public class ClickJet {
 		// driver.findElement(By.xpath("//input[@type='submit']")).click();
 		driver.findElement(By.cssSelector("input[value='Search']")).click();
 
-		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(src, new File("C:\\Users\\Leandro\\Eclipse-Workspace\\SeleniumWebdriver\\CodeNimbus\\out\\screenshot.png"));
-		Thread.sleep(1000L);
+		takeScreenshot(driver);
 		driver.quit();
 
+	}
+	
+	public static void takeScreenshot(WebDriver driver) throws IOException, InterruptedException {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(src,
+				new File("C:\\Users\\Leandro\\Eclipse-Workspace\\SeleniumWebdriver\\CodeNimbus\\out\\screenshot.png"));
+		Thread.sleep(1000L);
 	}
 
 }
