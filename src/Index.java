@@ -62,11 +62,10 @@ public class Index {
 		// Scroll to the element
 		js.executeScript("window.scrollBy(0,500)");
 		Thread.sleep(1000);
-		// js.executeScript("arguments[0].scrollIntoView(true);", datePicker);
+			// js.executeScript("arguments[0].scrollIntoView(true);", datePicker);
 		js.executeScript("document.querySelector('.tableFixHead').scrollTop=5000");
-		// js.executeScript(String.format("document.querySelector('%d').scrollTop=5000"),
-		// tableElement);
-		// js.executeScript("arguments[0].scrollTop=5000", tableElement);
+			// js.executeScript(String.format("document.querySelector('%d').scrollTop=5000"), tableElement);
+			// js.executeScript("arguments[0].scrollTop=5000", tableElement);
 	}
 
 }

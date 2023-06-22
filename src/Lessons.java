@@ -42,7 +42,6 @@ public class Lessons {
 		System.out.println(textBox);
 
 		// Select dropdown by visible text extracted from previous element
-		//
 		WebElement dropDown = driver.findElement(By.xpath("//select[@id='dropdown-class-example']"));
 		Select options = new Select(dropDown);
 		options.selectByVisibleText(textBox);
@@ -83,6 +82,7 @@ public class Lessons {
 		}
 
 		// AutoComplete DropDown Assignment
+		
 		// Locate the "Suggession Class Example" WebElement
 		WebElement suggestionExample = driver.findElement(By.id("select-class-example"));
 		// Find the input field within the "Suggession Class Example" section
